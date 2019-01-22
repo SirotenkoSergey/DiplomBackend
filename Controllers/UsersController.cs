@@ -17,5 +17,13 @@ namespace TodoApi.Controllers
             db = context;
         }
 
+        
+        [HttpGet]
+        public ActionResult<List<User>> GetAllUsers() {
+            return db.Users.ToList();
+        }
+        public ActionResult<User> GetUserByID(int UserID) {
+            return db.Users.Find();
+        }
     }
 }

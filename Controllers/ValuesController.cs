@@ -21,12 +21,8 @@ namespace TodoApi.Controllers
         [HttpGet]
         public ActionResult<List<NotebookItem>> Get()
         {
-            return db.NotebookItem.ToList() ;
-        }
-
-        public ActionResult<List<NotebookItem>> Post([FromBody] NotebookItem NotebookItem) {
-            db.NotebookItem.Add(NotebookItem);
-            return db.NotebookItem.ToList();
+            return db.NotebookItems.ToList() ;
+            //return new List<NotebookItem>();
         }
     }
 }
